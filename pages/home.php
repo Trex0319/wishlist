@@ -8,8 +8,7 @@
 
        // Instruction: require all the files you need here. Tips: (includes/functions.php, includes/class-products.php)
 
-
-    $product= $products->getProducts();
+    $allproducts = $products->getProducts();
        if($_SERVER['REQUEST_METHOD']=='POST'){
             $products->toggleWishlist($_POST['id']);
        }
@@ -40,7 +39,7 @@
         <div class="container mt-5 mb-2 mx-auto" style="max-width: 900px;">
             <!-- Only change code below this line -->
             <div class="row row-cols-1 row-cols-md-3 g-4">
-            <?php foreach($product as $product) : ?>
+            <?php foreach($allproducts as $product) : ?>
                 <div class="col">
                     <div class="card h-100">
                         <form
